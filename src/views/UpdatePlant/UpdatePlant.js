@@ -13,7 +13,14 @@ function UpdatePlant() {
     const [description,setDescription] = useState("")
     const [image,setImage] =useState("")
 
-const updatePlant = ()=>{
+const updatePlant = async ()=>{
+  const response = await axios.put(`${process.env.REACT_APP_API_URL}/plant/${id}`,{
+    name:name,
+    category:category,
+    price:price,
+    image:image,
+    description:description
+})
 
 }
 
