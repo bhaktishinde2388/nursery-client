@@ -2,6 +2,8 @@ import React from 'react'
 import "./UpdatePlant.css"
 import { useParams } from 'react-router-dom'
 import { useState , useEffect } from "react"
+import toast, { Toaster } from 'react-hot-toast';
+import axios from "axios"
 
 function UpdatePlant() {
     
@@ -13,16 +15,19 @@ function UpdatePlant() {
     const [description,setDescription] = useState("")
     const [image,setImage] =useState("")
 
-const updatePlant = async ()=>{
-  const response = await axios.put(`${process.env.REACT_APP_API_URL}/plant/${id}`,{
-    name:name,
-    category:category,
-    price:price,
-    image:image,
-    description:description
-})
+    const updatePlant = async()=>{
 
-}
+      const response = await axios.put(`${process.env.REACT_APP_API_URL}/plant/${id}`,{
+          name:name,
+          category:category,
+          price:price,
+          image:image,
+          description:description
+      })
+       
+      toast.success(response.data.message)
+     
+  }
 
 const loadPlant = async (id) =>{
 
@@ -46,7 +51,7 @@ const loadPlant = async (id) =>{
 
 useEffect(()=>{
     if(id){
-        updatePlant()
+       loadPlant()
     }
 }, [id])
 
