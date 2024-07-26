@@ -96,8 +96,9 @@ return (
           />
 
 
-<button type='button'onClick={updatePlant} className='add-plant-btn'>Add Plant</button>
+<button type='button'onClick={updatePlant} className='add-plant-btn'>Update Plant</button>
       </form>
+      <Toaster/>
   </div>
 )
 }
