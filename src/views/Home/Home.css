@@ -81,9 +81,16 @@ font-size: 17px;
 
 .add-img
 {
-    height: 50px;
+    height: 90px;
     position: fixed;
     right: 10px;
     bottom: 20px;
     z-index: 10;
+}
+
+.add-img:hover
+{
+   
+    transform: rotate(360deg);
+    transition-duration: 1.5s;
 }
