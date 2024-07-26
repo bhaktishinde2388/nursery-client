@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 import "./AddPlant.css"
 import toast, { Toaster } from 'react-hot-toast'
 import axios from 'axios'
+import HoverAddImg from "./flowers.png"
+import { Link } from 'react-router-dom'
 
 function AddPlant() {
 
@@ -72,7 +74,7 @@ function AddPlant() {
             onChange={(e)=>setDescription(e.target.value)}
             />
 
-<img src={image}></img>
+<img className='search-plant-img' src={image}></img>
 <input type='text'
             placeholder='Enter Plant Image Url'
             className='plant-input-box'
@@ -82,8 +84,9 @@ function AddPlant() {
 
 
 <button type='button' onClick={addPlant} className='add-plant-btn'>Add Plant</button>
+<img className='plant-img' src={HoverAddImg}></img>
         </form>
-
+<Link to="/" className='back'><h1>👈Back to Home</h1></Link>
         <Toaster/>
     </div>
   )

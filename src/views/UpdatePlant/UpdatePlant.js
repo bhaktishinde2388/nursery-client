@@ -4,6 +4,9 @@ import { useParams } from 'react-router-dom'
 import { useState , useEffect } from "react"
 import toast, { Toaster } from 'react-hot-toast';
 import axios from "axios"
+import HoverAddImg from "./../AddPlant/flowers.png"
+import "./../AddPlant/AddPlant.css"
+import { Link } from 'react-router-dom'
 
 function UpdatePlant() {
     
@@ -87,7 +90,7 @@ return (
           onChange={(e)=>setDescription(e.target.value)}
           />
 
-<img src={image}></img>
+<img className='search-plant-img' src={image}></img>
 <input type='text'
           placeholder='Enter Plant Image Url'
           className='plant-input-box'
@@ -97,7 +100,9 @@ return (
 
 
 <button type='button'onClick={updatePlant} className='add-plant-btn'>Update Plant</button>
+<img className='plant-img' src={HoverAddImg}></img>
       </form>
+      <Link to="/" className='back'><h1>👈Back to Home</h1></Link>
       <Toaster/>
   </div>
 )

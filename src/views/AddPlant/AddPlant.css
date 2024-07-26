@@ -1,14 +1,26 @@
 .form-container
 {
   margin: 20px;
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 400px;
+  background-image: linear-gradient( 184.1deg,  rgba(249,255,182,1) 44.7%, rgba(226,255,172,1) 67.2% );
+  height: 500px;
+  padding-top: 40px;
 }
 
 .plant-input-box
 {
     display: block;
-    margin: 20px;
-    padding: 5px;
+    margin: 20px auto;
+    padding: 10px;
     font-size: 17px;
+    display: block;
+    width: 300px;
+    border: 1px solid black;
+    border-radius: 10px;
+   
+  
 }
 
 .add-plant-btn
@@ -16,4 +28,34 @@
     padding: 5px 10px;
     border-radius: 10px;
     font-size: 18px;
+    margin: 20px;
+    display: block;
+    margin: 0 auto;
+    margin-top: 30px
+}
+.search-plant-img
+{
+  height: 400px;
+  width: 500px;
+  position: absolute;
+  left: 500px;
+  bottom: 100px;
+  margin-left: 100px;
+  border-radius: 10px;
+}
+
+.plant-img
+{
+  height: 140px;
+  width: 40%;
+  
+}
+.back
+{
+  text-decoration: none;
+  text-align: center;
+  color: rgb(36, 172, 127);
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
 }
