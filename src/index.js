@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     },
     {
         //dynamic routing
-        path:"/edit:id",
+        path:"/update/:id",
         element:<UpdatePlant/>
     },
     {
