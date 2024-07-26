@@ -24,6 +24,26 @@ const updatePlant = async ()=>{
 
 }
 
+const loadPlant = async (id) =>{
+
+  if(!id){
+      return
+  }
+
+  const response = await axios.get(`${process.env.REACT_APP_API_URL}/plant/${id}`)
+ 
+  const{name,category,price,image,description} = response.data.data     
+ 
+
+  setname(name)
+  setcategory(category)
+  setprice(price)
+  setiamge(image)
+  setdescription(description)
+
+}       
+
+
 useEffect(()=>{
     if(id){
         updatePlant()
