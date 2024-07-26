@@ -3,7 +3,25 @@ import "./UpdatePlant.css"
 import { useParams } from 'react-router-dom'
 import { useState } from "react"
 
+function UpdatePlant() {
 
+    const {id}= useParams();
+
+    const [name,setName] = useState("")
+    const [category,setCategory] = useState("")
+    const [price,setPrice] = useState(0)
+    const [description,setDescription] = useState("")
+    const [image,setImage] =useState("")
+
+const updatePlant = ()=>{
+
+}
+
+useEffect(()=>{
+    if(id){
+        updatePlant()
+    }
+}, [id])
 
   return (
     <div>
