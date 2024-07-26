@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import "./AddPlant.css"
 import toast, { Toaster } from 'react-hot-toast'
+import axios from 'axios'
 
 function AddPlant() {
 
@@ -12,13 +13,14 @@ function AddPlant() {
 
 
   const addPlant = async ()=>{
+    toast.loading("Adding Plant.......")
     if(!name || !price || !category || !description || !image){
       toast.error("plaese enter all detail")
 
       return
     }
 
-    const response = await axios.post(`${process.env.REACT_APP_API_URL}/plants`, {
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/plant`, {
       name:name,
       category:category,
       price:price,
@@ -26,7 +28,15 @@ function AddPlant() {
       description:description,
     })
 
-    console.log(response)
+    toast.dismiss()
+
+   toast.success(response.data.message)
+
+   setName("")
+   setCategory("")
+   setPrice("")
+   setDescription("")
+   setImage("")
   }
 
   return (
@@ -62,6 +72,7 @@ function AddPlant() {
             onChange={(e)=>setDescription(e.target.value)}
             />
 
+<img src={image}></img>
 <input type='text'
             placeholder='Enter Plant Image Url'
             className='plant-input-box'
