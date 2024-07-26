@@ -40,7 +40,8 @@ useEffect(()=>{
                 category,
                 price,
                 image,
-                description} = plant
+                description,
+              } = plant
 
             return <PlantCard 
                    key={i}
@@ -50,6 +51,8 @@ useEffect(()=>{
                    price={price}
                    image={image}
                    description={description}
+                   loadPlants={loadPlants}
+
             />
         })
        }
