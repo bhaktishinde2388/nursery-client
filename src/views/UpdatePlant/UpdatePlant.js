@@ -37,21 +37,21 @@ const loadPlant = async (id) =>{
 
   const response = await axios.get(`${process.env.REACT_APP_API_URL}/plant/${id}`)
  
-  const{name,category,price,image,description} = response.data.data     
+  const{price,name,category,image,description} = response.data.data     
  
 
-  setname(name)
-  setcategory(category)
-  setprice(price)
-  setiamge(image)
-  setdescription(description)
+  setName(name)
+  setCategory(category)
+  setPrice(price)
+  setImage(image)
+  setDescription(description)
 
 }       
 
 
 useEffect(()=>{
     if(id){
-       loadPlant()
+       loadPlant(id)
     }
 }, [id])
 
