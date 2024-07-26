@@ -1,0 +1,19 @@
+.form-container
+{
+  margin: 20px;
+}
+
+.plant-input-box
+{
+    display: block;
+    margin: 20px;
+    padding: 5px;
+    font-size: 17px;
+}
+
+.add-plant-btn
+{
+    padding: 5px 10px;
+    border-radius: 10px;
+    font-size: 18px;
+}

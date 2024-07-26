@@ -1,8 +1,9 @@
 import React from 'react'
+import "./PlantCard.css"
 
 function PlantCard({_id,name,category,image,price,description}) {
   return (
-    <div>
+    <div className='card-container'>
         <h1 className="plant-name">{name}</h1>
         <span className='plant-category'>{category}</span>
         <img className='plant-img' src={image}/>

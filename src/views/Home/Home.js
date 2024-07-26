@@ -4,6 +4,8 @@ import axios from "axios"
 import "./Home.css"
 import PlantCard from '../../components/PlantCard/PlantCard';
 import toast, { Toaster } from 'react-hot-toast';
+import ImgAdd from "./add (1).png"
+import { Link } from 'react-router-dom';
 
 
 function Home() {
@@ -52,6 +54,9 @@ useEffect(()=>{
        }
        <Toaster/>
 
+<Link to="/add">
+<img src={ImgAdd} className='add-img'/>
+</Link>
     </div>
   )
 }

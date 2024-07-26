@@ -78,3 +78,12 @@ font-size: 17px;
     font-size: 20px;
     margin: 0 auto;
 }
+
+.add-img
+{
+    height: 50px;
+    position: fixed;
+    right: 10px;
+    bottom: 20px;
+    z-index: 10;
+}
