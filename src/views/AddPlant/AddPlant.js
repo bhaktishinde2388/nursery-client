@@ -11,12 +11,22 @@ function AddPlant() {
   const [image,setImage] =useState("")
 
 
-  const addPlant =()=>{
+  const addPlant = async ()=>{
     if(!name || !price || !category || !description || !image){
       toast.error("plaese enter all detail")
 
       return
     }
+
+    const response = await axios.post(`${process.env.REACT_APP_API_URL}/plants`, {
+      name:name,
+      category:category,
+      price:price,
+      image:image,
+      description:description,
+    })
+
+    console.log(response)
   }
 
   return (
