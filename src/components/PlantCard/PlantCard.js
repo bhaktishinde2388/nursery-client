@@ -4,6 +4,7 @@ import UpdateImg from "./update.png"
 import DeleteImg from "./delete.png"
 import toast, { Toaster } from 'react-hot-toast';
 import axios from "axios"
+import { Link } from 'react-router-dom';
 
 function PlantCard({_id,name,category,image,price,description,loadPlants}) {
 
@@ -28,7 +29,9 @@ function PlantCard({_id,name,category,image,price,description,loadPlants}) {
        
         <img className="plant-image" src={image} />
       <div>
+        <Link to={`/edit/ ${_id}`}>
        <img src={UpdateImg} className='card-btn update' />
+       </Link>
       
        <img src={DeleteImg} className='card-btn delete' onClick={()=>{
         deletePlant(_id)

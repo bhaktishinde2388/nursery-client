@@ -6,6 +6,7 @@ import AddPlant from "./views/AddPlant/AddPlant"
 import{
     createBrowserRouter,RouterProvider
 } from "react-router-dom"
+import UpdatePlant from "./views/UpdatePlant/UpdatePlant"
 
 
 const root = ReactDOM.createRoot(document.getElementById("root"))
@@ -23,6 +24,11 @@ const router = createBrowserRouter([
     {
         path:"/add",
         element:<AddPlant/>
+    },
+    {
+        //dynamic routing
+        path:"/edit:id",
+        element:<UpdatePlant/>
     },
     {
         path:"*",
